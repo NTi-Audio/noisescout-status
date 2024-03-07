@@ -32,9 +32,26 @@
             margin-top: 20px;
         }
 
-        .server-status img {
-            max-width: 100%;
+        .status-box {
+            border: 1px solid #ccc;
             border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .error {
+            background-color: #f8d7da; /* Light red */
+            border-color: #f5c6cb; /* Red */
+        }
+
+        .warning {
+            background-color: #fff3cd; /* Light yellow */
+            border-color: #ffeeba; /* Yellow */
+        }
+
+        .ok {
+            background-color: #d4edda; /* Light green */
+            border-color: #c3e6cb; /* Green */
         }
 
         .picture-frame {
@@ -52,7 +69,7 @@
 </head>
 
 <body>
-    <div class="container">       
+    <div class="container">
         <img src="https://www.nti-audio.com//Portals/0/00-icons-logos/svg/logo-nti-audio.svg" alt="NTI Audio Logo" class="logo">
         <div class="picture-frame">
             <img src="https://www.nti-audio.com//portals/0/pics/en/Teaser-Unattended-Noise-Monitoring-1200-500.jpg" alt="NoiseScout">
@@ -60,14 +77,18 @@
 
         <h1>NoiseScout Server Status</h1>
 
-        <p>As of 2024-03-06 20:00 (UTC)</p>
-        <div class="server-status">
-            <p>The Server <strong>Noisecout.com</strong> is currently only available on <a href="http://www.noisescout.com">HTTP://www.noisescout.com</a>. Data synchronization and sending alarms are not affected.</p>
+        <div class="status-box warning">
+            <p>As of 2024-03-06 20:00 (UTC)</p>
+            <div class="server-status">
+                <p>The Server <strong>Noisecout.com</strong> is currently only available on <a href="http://www.noisescout.com">HTTP://www.noisescout.com</a>. Data synchronization and sending alarms are not affected.</p>
+            </div>
         </div>
 
-        <p>As of 2024-03-06 14:00 (UTC)</p>
-        <div class="server-status">
-            <p>The Server <strong>Noisecout.com</strong> is currently not reachable. Data synchronization and sending alarms are not affected.</p>
+        <div class="status-box error">
+            <p>As of 2024-03-06 14:00 (UTC)</p>
+            <div class="server-status">
+                <p>The Server <strong>Noisecout.com</strong> is currently not reachable. Data synchronization and sending alarms are not affected.</p>
+            </div>
         </div>
         <hr>
     </div>
